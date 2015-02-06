@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5xz-Ne-em5">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="CGK-Kp-IV3">
+            <objects>
+                <navigationController id="5xz-Ne-em5" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" opaque="NO" alpha="0.84999999999999987" contentMode="scaleToFill" id="WsX-CS-vaA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.091891001506024098" green="0.19490069653614459" blue="0.026814288403614456" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="bos-b7-Z5l" kind="relationship" relationship="rootViewController" id="WUC-Iw-5AD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qyP-cy-7AW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1239" y="593"/>
+        </scene>
+        <!--Saved Mail View Controller-->
+        <scene sceneID="pwZ-eR-CJY">
+            <objects>
+                <viewController id="KA9-0d-HBY" customClass="SavedMailViewController" customModule="Pulp" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="B2X-W8-TkO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xgl-Rl-lTh" customClass="customPBLayout" customModule="Pulp" customModuleProvider="target">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="KA9-0d-HBY" id="Q2t-G6-8D2"/>
+                            <outlet property="delegate" destination="KA9-0d-HBY" id="uUQ-1W-NWH"/>
+                        </connections>
+                    </collectionView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OmF-lG-cAS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304" y="593"/>
+        </scene>
+        <!--Inbox View Controller-->
+        <scene sceneID="Fnd-io-Jtu">
+            <objects>
+                <viewController id="bos-b7-Z5l" customClass="InboxViewController" customModule="Pulp" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ep9-oE-9SQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Yts-rh-cah" customClass="customPBLayout" customModule="Pulp" customModuleProvider="target">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="WSl-Rx-O1y"/>
+                    <connections>
+                        <segue destination="KA9-0d-HBY" kind="show" identifier="toSavedMail" id="Z7n-ua-SJq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F9m-Xo-lb7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-466" y="593"/>
+        </scene>
+    </scenes>
+</document>

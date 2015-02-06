@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F09F562C-35F9-447A-A415-2906CCB8660C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>EventWizard</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>98B80254497B727E63B431A628A83E6FF44B99A9</key>
+		<string>https://github.com/bensonz/super-benjalong.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>EventWizard/EventWizard.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>98B80254497B727E63B431A628A83E6FF44B99A9</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/bensonz/super-benjalong.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>98B80254497B727E63B431A628A83E6FF44B99A9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>98B80254497B727E63B431A628A83E6FF44B99A9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>super-benjalong</string>
+		</dict>
+	</array>
+</dict>
+</plist>

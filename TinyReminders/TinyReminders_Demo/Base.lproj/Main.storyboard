@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="RmR-3r-9qH">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--TinyReminders-->
+        <scene sceneID="16W-7b-7eB">
+            <objects>
+                <tableViewController id="HOP-j2-eRr" customClass="ReminderTableViewController" customModule="TinyReminders_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="22" sectionFooterHeight="22" id="1xm-uI-rHN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="reminder" rowHeight="66" id="lxF-br-xoK" customClass="ReminderCellTableViewCell" customModule="TinyReminders_Demo" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lxF-br-xoK" id="Mp1-9l-DLb">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjv-ue-8jh">
+                                            <rect key="frame" x="8" y="37" width="304" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.73424762229999996" green="0.037032161090000001" blue="0.17216343740000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZO-tJ-fc2">
+                                            <rect key="frame" x="8" y="8" width="304" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" red="0.73424762229999996" green="0.037032161090000001" blue="0.17216343740000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="reminderDate" destination="mjv-ue-8jh" id="Bae-5P-VEE"/>
+                                    <outlet property="reminderTitle" destination="iZO-tJ-fc2" id="AbK-qa-c9N"/>
+                                    <segue destination="0TZ-h1-Uqw" kind="push" identifier="tableToDisplay" id="CoX-co-Tog"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="HOP-j2-eRr" id="kFh-Ns-SDy"/>
+                            <outlet property="delegate" destination="HOP-j2-eRr" id="yuZ-YB-0FM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="TinyReminders" id="LXl-n5-xlV">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="X7h-wI-VvX">
+                            <connections>
+                                <segue destination="es8-45-YnT" kind="push" identifier="addReminder" id="GIW-i0-7oJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2oD-ad-vUR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892" y="178"/>
+        </scene>
+        <!--Add Reminder View Controller-->
+        <scene sceneID="VoX-L8-FhB">
+            <objects>
+                <viewController id="es8-45-YnT" customClass="addReminderViewController" customModule="TinyReminders_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kzu-OR-fdQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="8TJ-GS-sKu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zKa-uK-U2D">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PjR-5r-qLT" userLabel="LabelTextField">
+                                <rect key="frame" x="16" y="142" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wo0-kd-48E" userLabel="TimeTextField">
+                                <rect key="frame" x="16" y="308" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UN1-Kv-sfO">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="xS3-GQ-ZJO">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ASP-io-n7Y">
+                                <rect key="frame" x="16" y="399" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3Uh-Cn-rHX" kind="unwind" unwindAction="done:" id="RCn-UT-YgG"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="labelTextField" destination="PjR-5r-qLT" id="4Dt-Hz-Vh6"/>
+                        <outlet property="timeTextField" destination="wo0-kd-48E" id="H6E-zO-wEs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ujn-bi-RQz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="3Uh-Cn-rHX" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1369" y="-422"/>
+        </scene>
+        <!--Reminder Display View Controller-->
+        <scene sceneID="CA7-n2-BLC">
+            <objects>
+                <viewController id="0TZ-h1-Uqw" customClass="ReminderDisplayViewController" customModule="TinyReminders_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g7c-YW-hWD"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y6o-pG-gB6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0QV-af-pfd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xy5-Ot-rRX">
+                                <rect key="frame" x="16" y="85" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.73424762229999996" green="0.037032161090000001" blue="0.17216343740000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NiD-S0-jpO">
+                                <rect key="frame" x="16" y="170" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PUT-6f-pWi"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="NiD-S0-jpO" id="Me6-sq-jZF"/>
+                        <outlet property="titleLabel" destination="Xy5-Ot-rRX" id="YtG-pL-48g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Is9-8T-WJt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1390" y="274"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xXO-m5-VUy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RmR-3r-9qH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Uws-rx-fhl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HOP-j2-eRr" kind="relationship" relationship="rootViewController" id="a6k-Ae-YVz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0XD-gF-hqh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="469" y="178"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
